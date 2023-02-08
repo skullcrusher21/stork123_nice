@@ -18,15 +18,7 @@ def create_state_space_tree(
     index: int,
     index_used: list[int],
 ) -> None:
-    """
-    Creates a state space tree to iterate through each branch using DFS.
-    We know that each state has exactly len(sequence) - index children.
-    It terminates when it reaches the end of the given sequence.
-    """
 
-    if index == len(sequence):
-        print(current_sequence)
-        return
 
     for i in range(len(sequence)):
         if not index_used[i]:
